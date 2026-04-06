@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+    <div class="page-container">
+        <img src="{% static 'images/ganadi.png' %}" alt="가나디" width="100px">
+        <p class="tag">LikeLion_14th_session</p>
+        <h1 class="title">2026 멋쟁이사자처럼 {{ generation }}기</h1>
+        <h6 class="welcome">2주차 세션 정리</h6>
+
+        <div class="section">
+            <div class="section-title">🦁 Django 첫 페이지 만들기 🦁</div>
+            <ul>
+                <li>HTML 작성 : Templates>>main>>mainpage.html 파일 생성</li>
+                <li>View 작성 : views.py를 통해 mainpage가 렌더링 될 수 있게끔 함</li>
+                <li>URL 연결 : urls.py 작성하기</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <div class="section-title">🦁 Template 언어 🦁</div>
+            <ul>
+                <li>Template 언어란? : python의 변수, 문법을 HTML에서 사용할 수 있게 해주는언어</li>
+                <li>변수 사용 : ex, 안녕하세요 저는 {{name}}입니다.</li>
+                <li>반복문과 조건문</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <div class="section-title">🦁 중복되는 html 파일 정리 🦁</div>
+            <ul>
+                <li>Template 상속 : project>>templates>>base.html 파일 생성 후 &lt;% extends 'base.html' %&gt;을 통해 상속받음</li>
+                <li>Template 경로 추가 : 코드를 통해 project/template에 있는 템플릿들도 사용할거라는 걸 나타냄</li>
+                <li>navbar 상속 : base.html에서 nav부분을 잘라내서 _navbar.html로 옮긴 후 잘라낸 부분엔 &lt;% include %&gt;를 이용해 상속시킴</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <div class="section-title">🦁 정적 파일 분리 🦁</div>
+            <ul>
+                <li>정적 파일 폴더 생성 : project 폴더에 static 폴더 생성, static 폴더에 css 폴더, images 폴더 생성, css 폴더에 project.css 파일 생성</li>
+                <li>base.html에서 css 연결하기</li>
+                <li>mainpage.html에서 image 넣기</li>
+                <li>setting.py에서 정적 파일 경로 설정하기</li>
+            </ul>
+        </div>
+    </div>
+{% endblock %}
